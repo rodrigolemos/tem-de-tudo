@@ -6,7 +6,7 @@
   "password": "docker",
   "database": "tem_de_tudo",
   "entities": [
-    "./src/modules/**/infra/typeorm/entities/*.ts"
+    "./src/modules/**/entities/*.ts"
   ],
   "migrations": [
     "./src/shared/infra/typeorm/migrations/*.ts"
