@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import businessRouter from '@modules/business/infra/http/routes/business.routes';
+import productsRouter from '@modules/products/infra/http/routes/products.routes';
 
 const routes = Router();
 
-routes.use('/business', businessRouter);
+routes.use('/products', productsRouter);
 
 export default routes;
