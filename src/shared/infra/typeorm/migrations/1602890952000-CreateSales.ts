@@ -74,8 +74,20 @@ export class CreateSales1602890952000 implements MigrationInterface {
         await queryRunner.createForeignKey(
             'sales',
             new TableForeignKey({
-                name: 'SalesPartner',
-                columnNames: ['customer_id', 'seller_id'],
+                name: 'SalesCustomer',
+                columnNames: ['customer_id'],
+                referencedColumnNames: ['id'],
+                referencedTableName: 'partners',
+                onDelete: 'SET NULL',
+                onUpdate: 'CASCADE',
+            }),
+        );
+
+        await queryRunner.createForeignKey(
+            'sales',
+            new TableForeignKey({
+                name: 'SalesSeller',
+                columnNames: ['seller_id'],
                 referencedColumnNames: ['id'],
                 referencedTableName: 'partners',
                 onDelete: 'SET NULL',
@@ -86,7 +98,8 @@ export class CreateSales1602890952000 implements MigrationInterface {
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropForeignKey('products', 'SalesProduct');
-        await queryRunner.dropForeignKey('partners', 'SalesPartner');
+        await queryRunner.dropForeignKey('partners', 'SalesCustomer');
+        await queryRunner.dropForeignKey('partners', 'SalesSeller');
         await queryRunner.dropTable('sales');
     }
 
