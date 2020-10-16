@@ -2,15 +2,10 @@ import { getRepository } from 'typeorm';
 
 import AppError from '@shared/errors/AppError';
 import Customer from '../entities/Customer';
-
-interface Request {
-  name: string;
-  address: string;
-  phone: string;
-}
+import ICreateCustomerServiceDTO from '../dtos/ICreateCustomerServiceDTO';
 
 class CreateCustomerService {
-  public async execute(customerData: Request): Promise<Customer | null> {
+  public async execute(customerData: ICreateCustomerServiceDTO): Promise<Customer | null> {
     try {
 
       const customersRepository = getRepository(Customer);
