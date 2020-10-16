@@ -6,8 +6,8 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('customers')
-class Customer {
+@Entity('partners')
+class Partner {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
@@ -20,6 +20,9 @@ class Customer {
   @Column()
   phone: string;
 
+  @Column()
+  type: string;
+
   @CreateDateColumn()
   created_at: Date;
 
@@ -27,4 +30,4 @@ class Customer {
   updated_at: Date;
 }
 
-export default Customer;
+export default Partner;

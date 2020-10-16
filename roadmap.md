@@ -14,3 +14,4 @@ Tratamento de erros - 15 minutos
 # Dia 2
 Refatoração de repository de produtos e criação de DTOs - 15 minutos
 Criação de tabela, modelo e serviço de criação de clientes - 45 minutos
+Serviço de listagem de clientes - 15 minutos
