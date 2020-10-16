@@ -2,21 +2,10 @@ import { getRepository } from 'typeorm';
 
 import AppError from '@shared/errors/AppError';
 import Product from '../entities/Product';
-
-interface Request {
-  name: string;
-  description: string;
-  brand: string;
-  provider: string;
-  classification: string;
-  cost_price: number;
-  sale_price: number;
-  stock_quantity: number;
-  store_quantity: number;
-}
+import ICreateProductServiceDTO from '../dtos/ICreateProductServiceDTO';
 
 class CreateProductService {
-  public async execute(productData: Request): Promise<Product | null> {
+  public async execute(productData: ICreateProductServiceDTO): Promise<Product | null> {
     try {
 
       const productsRepository = getRepository(Product);
