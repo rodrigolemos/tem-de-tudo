@@ -1,15 +1,15 @@
 import { Request, Response } from 'express';
 
-import ListProductService from '@modules/products/services/ListProductsService';
+import ListProductsService from '@modules/products/services/ListProductsService';
 import CreateProductService from '@modules/products/services/CreateProductService';
 
 export default class ProductsController {
 
   public async list(req: Request, res: Response) {
 
-    const listProductService = new ListProductService();
+    const listProductsService = new ListProductsService();
 
-    const productsFound = await listProductService.execute();
+    const productsFound = await listProductsService.execute();
 
     return res.json(productsFound);
 
