@@ -9,9 +9,10 @@ export class CreateProducts1602799380337 implements MigrationInterface {
                 columns: [
                     {
                         name: 'id',
-                        type: 'varchar',
+                        type: 'integer',
                         isPrimary: true,
-                        generationStrategy: 'uuid',
+                        isGenerated: true,
+                        generationStrategy: 'increment',
                     },
                     {
                         name: 'name',

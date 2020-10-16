@@ -4,7 +4,6 @@ import Product from '../entities/Product';
 import ProductsRepository from '../repositories/ProductsRepository';
 
 interface Request {
-  id: string;
   name: string;
   description: string;
   brand: string;
