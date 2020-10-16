@@ -1,8 +1,7 @@
-import { getCustomRepository } from 'typeorm';
+import { getRepository } from 'typeorm';
 
 import AppError from '@shared/errors/AppError';
 import Product from '../entities/Product';
-import ProductsRepository from '../repositories/ProductsRepository';
 
 interface Request {
   name: string;
@@ -20,7 +19,7 @@ class CreateProductService {
   public async execute(productData: Request): Promise<Product | null> {
     try {
 
-      const productsRepository = getCustomRepository(ProductsRepository);
+      const productsRepository = getRepository(Product);
 
       const product = productsRepository.create(productData);
 
