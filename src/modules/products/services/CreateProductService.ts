@@ -1,5 +1,6 @@
 import { getCustomRepository } from 'typeorm';
 
+import AppError from '@shared/errors/AppError';
 import Product from '../entities/Product';
 import ProductsRepository from '../repositories/ProductsRepository';
 
@@ -17,13 +18,21 @@ interface Request {
 
 class CreateProductService {
   public async execute(productData: Request): Promise<Product | null> {
-    const productsRepository = getCustomRepository(ProductsRepository);
+    try {
 
-    const product = productsRepository.create(productData);
+      const productsRepository = getCustomRepository(ProductsRepository);
 
-    await productsRepository.save(product);
+      const product = productsRepository.create(productData);
 
-    return product;
+      await productsRepository.save(product);
+
+      return product;
+
+    } catch {
+
+      throw new AppError('Internal Server Error');
+
+    }
   }
 }
 
