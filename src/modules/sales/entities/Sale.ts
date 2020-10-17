@@ -18,9 +18,9 @@ class Sale {
   order: number;
 
   @PrimaryColumn()
-  @OneToOne(() => Product, product => product.id, { eager: true })
+  @OneToOne(() => Product, product => product.id)
   @JoinColumn({ name: 'product_id' })
-  product: number;
+  product_id: number;
 
   @Column()
   quantity: number;
