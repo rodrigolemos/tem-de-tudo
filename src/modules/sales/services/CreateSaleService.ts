@@ -42,6 +42,9 @@ class CreateSaleService {
     saleData.sale_price = product.sale_price * saleData.quantity;
     saleData.cost_price = product.cost_price * saleData.quantity;
 
+    // Check stock
+    // Remove from stock
+
     const sale = salesRepository.create(saleData);
 
     await salesRepository.save(sale);

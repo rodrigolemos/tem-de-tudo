@@ -24,3 +24,38 @@
 # Dia 3
 - Inclusão de registros corretos nas tabelas - 15 minutos
 - Finalização da inclusão de venda - 30 minutos
+- Criação de querys para relatórios - 20 minutos
+
+/* Vendas semanais
+SELECT date, SUM(quantity), SUM(sale_price)
+FROM sales
+WHERE date BETWEEN '2020-03-01' AND '2020-03-30'
+GROUP BY date
+ORDER BY date;
+*/
+
+/* Lucro semanal
+SELECT date, SUM(sale_price) - SUM(cost_price) as profit
+FROM sales
+WHERE date BETWEEN '2020-03-01' AND '2020-03-30'
+GROUP BY date
+ORDER BY date;
+*/
+
+/* Melhores vendedores
+SELECT p.name, SUM(s.sale_price) as sales
+FROM sales s, partners p
+WHERE s.seller_id = p.id AND
+s.date BETWEEN '2020-03-01' AND '2020-03-30'
+GROUP BY p.name
+ORDER BY sales DESC;
+*/
+
+/* Melhores vendedores
+SELECT p.name, SUM(s.sale_price) as sales
+FROM sales s, partners p
+WHERE s.customer_id = p.id AND
+s.date BETWEEN '2020-03-01' AND '2020-03-30'
+GROUP BY p.name
+ORDER BY sales DESC;
+*/
