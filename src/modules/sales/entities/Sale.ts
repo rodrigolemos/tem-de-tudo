@@ -1,48 +1,49 @@
 import {
   Entity,
   Column,
+  JoinColumn,
+  OneToOne,
+  PrimaryColumn,
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
+import Product from '@modules/products/entities/Product';
+import Partner from '@modules/partners/entities/Partner';
+
 @Entity('sales')
 class Sale {
   @PrimaryGeneratedColumn('increment')
-  id: number;
+  order: number;
 
-  // @Column()
-  // name: string;
+  @PrimaryColumn()
+  @OneToOne(() => Product, product => product.id, { eager: true })
+  @JoinColumn({ name: 'product_id' })
+  product: number;
 
-  // @Column()
-  // description: string;
+  @Column()
+  quantity: number;
 
-  // @Column()
-  // brand: string;
+  @Column()
+  sale_price: number;
 
-  // @Column()
-  // provider: string;
+  @OneToOne(() => Partner, partner => partner.id, { eager: true })
+  @JoinColumn({ name: 'customer_id' })
+  customer: Partner;
 
-  // @Column()
-  // classification: string;
+  @OneToOne(() => Partner, partner => partner.id, { eager: true })
+  @JoinColumn({ name: 'seller_id' })
+  seller: Partner;
 
-  // @Column()
-  // cost_price: number;
+  @Column()
+  date: Date;
 
-  // @Column()
-  // sale_price: number;
+  @CreateDateColumn()
+  created_at: Date;
 
-  // @Column()
-  // stock_quantity: number;
-
-  // @Column()
-  // store_quantity: number;
-
-  // @CreateDateColumn()
-  // created_at: Date;
-
-  // @UpdateDateColumn()
-  // updated_at: Date;
+  @UpdateDateColumn()
+  updated_at: Date;
 }
 
 export default Sale;
