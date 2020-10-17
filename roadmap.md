@@ -18,3 +18,8 @@
 - Refatoração de entidades para uso de tabela única (de clientes/vendedores para parceiros) - 20 minutos
 - Criação de estrutura para vendas - 20 minutos
 - Criação de tabela e entidades de vendas - 60 minutos
+- Criação de serviço de listagem de vendas - 30 minutos
+- Criação de inclusão de venda - 40 minutos
+
+# Dia 3
+- Inclusão de registros corretos nas tabelas - 10 minutos
