@@ -6,6 +6,6 @@ const salesRouter = Router();
 const salesController = new SalesController();
 
 salesRouter.get('/list', salesController.list);
-// salesRouter.post('/create', salesController.create);
+salesRouter.post('/create', salesController.create);
 
 export default salesRouter;

@@ -16,3 +16,5 @@
 - Criação de tabela, modelo e serviço de criação de clientes - 45 minutos
 - Serviço de listagem de clientes - 15 minutos
 - Refatoração de entidades para uso de tabela única (de clientes/vendedores para parceiros) - 20 minutos
+- Criação de estrutura para vendas - 20 minutos
+- Criação de tabela e entidades de vendas - 60 minutos

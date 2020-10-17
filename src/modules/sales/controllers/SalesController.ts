@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 
 import ListSalesService from '@modules/sales/services/ListSalesService';
-// import CreateSaleService from '@modules/sales/services/CreateSaleService';
+import CreateSaleService from '@modules/sales/services/CreateSaleService';
 
 export default class SalesController {
 
@@ -15,14 +15,14 @@ export default class SalesController {
 
   }
 
-  // public async create(req: Request, res: Response) {
+  public async create(req: Request, res: Response) {
 
-  //   const createSaleService = new CreateSaleService();
+    const createSaleService = new CreateSaleService();
 
-  //   const sale = await createSaleService.execute(req.body);
+    const sale = await createSaleService.execute(req.body);
     
-  //   return res.json(sale);
+    return res.json(sale);
 
-  // }
+  }
 
 }
