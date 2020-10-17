@@ -8,27 +8,9 @@ import ICreateSaleServiceDTO from '../dtos/ICreateSaleServiceDTO';
 class CreateSaleService {
   public async execute(saleData: ICreateSaleServiceDTO): Promise<Sale | null> {
 
-    const customer = await getRepository(Partner).findOne({
-      where: {
-        id: saleData.customer.id,
-        type: 'customer'
-      }
-    });
+    await this.checkPartner(saleData, 'customer');
 
-    if (!customer) {
-      throw new AppError('Customer does not exist.', 400);
-    }
-
-    const seller = await getRepository(Partner).findOne({
-      where: {
-        id: saleData.seller.id,
-        type: 'seller'
-      }
-    });
-
-    if (!seller) {
-      throw new AppError('Seller does not exist.', 400);
-    }
+    await this.checkPartner(saleData, 'seller');
 
     const salesRepository = getRepository(Sale);
 
@@ -39,6 +21,26 @@ class CreateSaleService {
     return sale;
 
   }
+
+  private async checkPartner(saleData: ICreateSaleServiceDTO, type: 'customer' | 'seller'): Promise<Partner | null> {
+
+    const id = type === 'customer' ? saleData.customer.id : saleData.seller.id;
+
+    const partner = await getRepository(Partner).findOne({
+      where: {
+        id,
+        type
+      }
+    });
+
+    if (!partner) {
+      throw new AppError(`${type} does not exist.`, 400);
+    }
+
+    return partner;
+
+  }
+
 }
 
 export default CreateSaleService;
