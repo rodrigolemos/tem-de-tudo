@@ -14,7 +14,7 @@ import Partner from '@modules/partners/entities/Partner';
 
 @Entity('sales')
 class Sale {
-  @PrimaryGeneratedColumn('increment')
+  @PrimaryColumn()
   order: number;
 
   @PrimaryColumn()

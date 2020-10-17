@@ -11,8 +11,7 @@ export class CreateSales1602890952000 implements MigrationInterface {
                         name: 'order',
                         type: 'integer',
                         isPrimary: true,
-                        isGenerated: true,
-                        generationStrategy: 'increment',
+                        isNullable: false,
                     },
                     {
                         name: 'product_id',
