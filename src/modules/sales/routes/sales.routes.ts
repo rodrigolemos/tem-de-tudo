@@ -11,7 +11,7 @@ salesRouter.post('/create', salesController.create);
 // Reports
 salesRouter.get('/period', salesController.listPeriod);
 salesRouter.get('/profit', salesController.listProfit);
-// salesRouter.get('/top-sellers', salesController.create);
+salesRouter.get('/top-sellers', salesController.listTopSellers);
 // salesRouter.get('/top-customers', salesController.create);
 
 export default salesRouter;

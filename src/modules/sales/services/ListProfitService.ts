@@ -6,7 +6,7 @@ import Sale from '../entities/Sale';
 class ListProfitService {
   public async execute({ starts, finishes }: IReportsServiceDTO): Promise<Sale[] | null> {
 
-    const listPeriod = await getRepository(Sale)
+    const listProfit = await getRepository(Sale)
       .createQueryBuilder('sales')
       .select('date, SUM(sale_price) - SUM(cost_price) as profit')
       .where('date BETWEEN :starts AND :finishes ', {
@@ -17,7 +17,7 @@ class ListProfitService {
       .orderBy('date')
       .getRawMany();
 
-    return listPeriod;
+    return listProfit;
 
   }
 }
