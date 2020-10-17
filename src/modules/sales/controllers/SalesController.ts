@@ -7,6 +7,7 @@ import CreateSaleService from '@modules/sales/services/CreateSaleService';
 import ListPeriodService from '@modules/sales/services/ListPeriodService';
 import ListProfitService from '@modules/sales/services/ListProfitService';
 import ListTopSellersService from '@modules/sales/services/ListTopSellersService';
+import ListTopCustomersService from '@modules/sales/services/ListTopCustomersService';
 
 export default class SalesController {
 
@@ -67,6 +68,21 @@ export default class SalesController {
     const listTopSellersService = new ListTopSellersService();
 
     const profitInPeriod = await listTopSellersService.execute({
+      starts,
+      finishes
+    });
+
+    return res.json(profitInPeriod);
+
+  }
+
+  public async listTopCustomers(req: Request, res: Response) {
+
+    const { starts, finishes } = req.query;
+
+    const listTopCustomersService = new ListTopCustomersService();
+
+    const profitInPeriod = await listTopCustomersService.execute({
       starts,
       finishes
     });
