@@ -14,6 +14,8 @@ class CreateSaleService {
 
     const salesRepository = getRepository(Sale);
 
+    saleData.order = await this.setOrderNumber();
+
     const sale = salesRepository.create(saleData);
 
     await salesRepository.save(sale);
@@ -38,6 +40,20 @@ class CreateSaleService {
     }
 
     return partner;
+
+  }
+
+  private async setOrderNumber(): Promise<number> {
+
+    const salesRepository = getRepository(Sale);
+
+    let lastOrder = await salesRepository.find({
+      order: {
+        order: 'DESC',
+      }
+    });
+
+    return !lastOrder.length ? 1 : lastOrder[0].order + 1;
 
   }
 
