@@ -10,7 +10,7 @@ salesRouter.post('/create', salesController.create);
 
 // Reports
 salesRouter.get('/period', salesController.listPeriod);
-// salesRouter.get('/profit', salesController.create);
+salesRouter.get('/profit', salesController.listProfit);
 // salesRouter.get('/top-sellers', salesController.create);
 // salesRouter.get('/top-customers', salesController.create);
 
