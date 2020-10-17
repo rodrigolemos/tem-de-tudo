@@ -22,4 +22,5 @@
 - Criação de inclusão de venda - 40 minutos
 
 # Dia 3
-- Inclusão de registros corretos nas tabelas - 10 minutos
+- Inclusão de registros corretos nas tabelas - 15 minutos
+- Finalização da inclusão de venda - 30 minutos

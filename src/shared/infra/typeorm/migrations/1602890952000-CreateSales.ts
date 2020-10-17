@@ -25,6 +25,11 @@ export class CreateSales1602890952000 implements MigrationInterface {
                         isNullable: false,
                     },
                     {
+                        name: 'cost_price',
+                        type: 'decimal',
+                        isNullable: false,
+                    },
+                    {
                         name: 'sale_price',
                         type: 'decimal',
                         isNullable: false,

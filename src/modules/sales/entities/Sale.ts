@@ -26,6 +26,9 @@ class Sale {
   quantity: number;
 
   @Column()
+  cost_price: number;
+
+  @Column()
   sale_price: number;
 
   @OneToOne(() => Partner, partner => partner.id, { eager: true })

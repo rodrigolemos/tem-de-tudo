@@ -24,7 +24,7 @@ class CreateSaleService {
     });
 
     if (order.length) {
-      throw new AppError(`order already exists.`, 400);
+      throw new AppError(`this order is already associated to this product.`, 400);
     }
 
     // Check if product exists
@@ -38,8 +38,9 @@ class CreateSaleService {
       throw new AppError(`product does not exist.`, 400);
     }
 
-    // Calculates the sale price
+    // Sets the cost and sale price in order to calculate profit
     saleData.sale_price = product.sale_price * saleData.quantity;
+    saleData.cost_price = product.cost_price * saleData.quantity;
 
     const sale = salesRepository.create(saleData);
 
