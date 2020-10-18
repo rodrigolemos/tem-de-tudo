@@ -11,16 +11,16 @@ class Partner {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column()
+  @Column('varchar')
   name: string;
 
-  @Column()
+  @Column('varchar')
   address: string;
 
-  @Column()
+  @Column('varchar')
   phone: string;
 
-  @Column()
+  @Column('varchar')
   type: string;
 
   @CreateDateColumn()

@@ -14,21 +14,21 @@ import Partner from '@modules/partners/entities/Partner';
 
 @Entity('sales')
 class Sale {
-  @PrimaryColumn()
+  @PrimaryColumn('integer')
   order: number;
 
-  @PrimaryColumn()
+  @PrimaryColumn('integer')
   @OneToOne(() => Product, product => product.id)
   @JoinColumn({ name: 'product_id' })
   product_id: number;
 
-  @Column()
+  @Column('integer')
   quantity: number;
 
-  @Column()
+  @Column('float')
   cost_price: number;
 
-  @Column()
+  @Column('float')
   sale_price: number;
 
   @OneToOne(() => Partner, partner => partner.id, { eager: true })
@@ -39,7 +39,7 @@ class Sale {
   @JoinColumn({ name: 'seller_id' })
   seller: Partner;
 
-  @Column()
+  @Column('date')
   date: Date;
 
   @CreateDateColumn()

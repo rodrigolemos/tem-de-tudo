@@ -11,31 +11,31 @@ class Product {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column()
+  @Column('varchar')
   name: string;
 
-  @Column()
+  @Column('varchar')
   description: string;
 
-  @Column()
+  @Column('varchar')
   brand: string;
 
-  @Column()
+  @Column('varchar')
   provider: string;
 
-  @Column()
+  @Column('varchar')
   classification: string;
 
-  @Column()
+  @Column('float')
   cost_price: number;
 
-  @Column()
+  @Column('float')
   sale_price: number;
 
-  @Column()
+  @Column('integer')
   stock_quantity: number;
 
-  @Column()
+  @Column('integer')
   store_quantity: number;
 
   @CreateDateColumn()
