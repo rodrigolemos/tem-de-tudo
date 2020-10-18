@@ -6,10 +6,10 @@
   "password": "docker",
   "database": "tem_de_tudo",
   "entities": [
-    "./src/modules/**/entities/*.ts"
+    "./src/modules/**/entities/*{.ts,.js}"
   ],
   "migrations": [
-    "./src/shared/infra/typeorm/migrations/*.ts"
+    "./src/shared/infra/typeorm/migrations/*{.ts,.js}"
   ],
   "cli": {
     "migrationsDir": "./src/shared/infra/typeorm/migrations"

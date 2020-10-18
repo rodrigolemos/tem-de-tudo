@@ -29,4 +29,5 @@
 - Implementação do relatório de lucro por período - 30 minutos
 - Implementação do relatório de melhores vendedores por período - 30 minutos
 - Implementação do relatório de melhores clientes por período - 15 minutos
+- Configurando build de produção - 120 minutos
 - Criação de estrutura inicial do front end - 40 minutos
