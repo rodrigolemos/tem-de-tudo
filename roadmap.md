@@ -31,3 +31,17 @@
 - Implementação do relatório de melhores clientes por período - 15 minutos
 - Configurando build de produção - 120 minutos
 - Criação de estrutura inicial do front end - 40 minutos
+
+# Dia 4
+- Criação de página inicial, componentes primários e style global - 30 minutos
+- Definição de estilos e variáveis para tema - 20 minutos
+- Finalização de painel lateral e estrutura principal - 20 minutos
+- Criação de API Client, componente de loading e tabela reutilizável - 60 minutos
+- Página de produtos e parceiros - 30 minutos
+- Criação de estrutura para relatórios de vendas - 30 minutos
+- Relatório de melhores vendedores - 30 minutos
+- Relatório de melhores clientes - 15 minutos
+- Relatório de vendas por período - 15 minutos
+- Relatório de lucro por período - 15 minutos
+- Formatação de datas e valores - 30 minutos
+- Revisão de nomes, formatos, helpers e loading - 60 minutos
