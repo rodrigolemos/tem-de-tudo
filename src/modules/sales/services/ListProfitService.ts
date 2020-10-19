@@ -8,7 +8,7 @@ class ListProfitService {
 
     const listProfit = await getRepository(Sale)
       .createQueryBuilder('sales')
-      .select('date, SUM(sale_price) - SUM(cost_price) as profit')
+      .select('date, SUM(sale_price) - SUM(cost_price) as total')
       .where('date BETWEEN :starts AND :finishes ', {
         starts: starts,
         finishes: finishes,
