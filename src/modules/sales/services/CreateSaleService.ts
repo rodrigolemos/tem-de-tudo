@@ -30,7 +30,7 @@ class CreateSaleService {
       });
 
       if (order.length) {
-        throw new AppError(`this order is already associated to this product.`, 400);
+        throw new AppError(`Este número de pedido já foi associado ao produto.`, 400);
       }
 
       // Check if product exists
@@ -41,7 +41,7 @@ class CreateSaleService {
       });
 
       if (!product) {
-        throw new AppError(`product does not exist.`, 400);
+        throw new AppError(`Produto não encontrado.`, 400);
       }
 
       // Check and remove from product from stock
@@ -49,7 +49,7 @@ class CreateSaleService {
 
       if (finalQuantity < 0) {
 
-        throw new AppError(`insufficient stock`, 400);
+        throw new AppError(`Quantidade em estoque insuficiente.`, 400);
 
       } else {
 
@@ -91,7 +91,7 @@ class CreateSaleService {
     });
 
     if (!partner) {
-      throw new AppError(`${type} does not exist.`, 400);
+      throw new AppError(`Cliente ou vendedor não encontrado(s).`, 400);
     }
 
     return partner;
