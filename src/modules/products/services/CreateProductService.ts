@@ -6,21 +6,13 @@ import ICreateProductServiceDTO from '../dtos/ICreateProductServiceDTO';
 
 class CreateProductService {
   public async execute(productData: ICreateProductServiceDTO): Promise<Product | null> {
-    try {
+    const productsRepository = getRepository(Product);
 
-      const productsRepository = getRepository(Product);
+    const product = productsRepository.create(productData);
 
-      const product = productsRepository.create(productData);
+    await productsRepository.save(product);
 
-      await productsRepository.save(product);
-
-      return product;
-
-    } catch {
-
-      throw new AppError('Internal Server Error');
-
-    }
+    return product;
   }
 }
 

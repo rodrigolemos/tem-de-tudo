@@ -14,7 +14,7 @@ class RemoveProductService {
     });
 
     if (!productFound) {
-      throw new AppError('product not found');
+      throw new AppError('Produto não encontrado.');
     }
 
     productFound.status = 'I';
