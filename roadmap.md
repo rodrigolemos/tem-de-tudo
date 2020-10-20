@@ -56,3 +56,5 @@
 
 # Dia 6
 - Inclusão de coluna status para remoção de produtos e parceiros - 45 minutos
+- Finalização do serviço de inclusão de venda (validação de estoque e múltiplos itens) - 30 minutos
+- Ajustes no tratamento de erros e tradução das mensagens de resposta - 30 minutos
