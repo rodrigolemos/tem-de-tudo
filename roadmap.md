@@ -53,3 +53,6 @@
 - Utilização de gráficos para tela inicial - 30 minutos
 - Criação de formulário para inclusão de produto - 45 minutos
 - Melhorias no design, escolha de fontes, componentização de itens - 60 minutos
+
+# Dia 6
+- Inclusão de coluna status para remoção de produtos e parceiros - 45 minutos

@@ -7,49 +7,56 @@ import Product from '@modules/products/entities/Product';
 import ICreateSaleServiceDTO from '../dtos/ICreateSaleServiceDTO';
 
 class CreateSaleService {
-  public async execute(saleData: ICreateSaleServiceDTO): Promise<Sale | null> {
-
-    // Check if customer and seller exist
-    await this.checkPartner(saleData, 'customer');
-    await this.checkPartner(saleData, 'seller');
+  public async execute(saleData: ICreateSaleServiceDTO[]): Promise<Sale[] | {}> {
 
     const salesRepository = getRepository(Sale);
+    const productsRepository = getRepository(Product);
 
-    // Check if an order for the product already exists
-    const order = await salesRepository.find({
-      where: {
-        order: saleData.order,
-        product_id: saleData.product_id
+    for (const itemSale of saleData) {
+
+      // Check if customer and seller exist
+      await this.checkPartner(itemSale, 'customer');
+      await this.checkPartner(itemSale, 'seller');
+
+      // Check if an order for the product already exists
+      const order = await salesRepository.find({
+        where: {
+          order: itemSale.order,
+          product_id: itemSale.product_id
+        }
+      });
+
+      if (order.length) {
+        throw new AppError(`this order is already associated to this product.`, 400);
       }
-    });
 
-    if (order.length) {
-      throw new AppError(`this order is already associated to this product.`, 400);
+      // Check if product exists
+      const product = await productsRepository.findOne({
+        where: {
+          id: itemSale.product_id
+        }
+      });
+
+      if (!product) {
+        throw new AppError(`product does not exist.`, 400);
+      }
+
+      // Sets the cost and sale price in order to calculate profit
+      itemSale.sale_price = product.sale_price * itemSale.quantity;
+      itemSale.cost_price = product.cost_price * itemSale.quantity;
+
+      // Check stock
+      // Remove from stock
+
+      const sale = salesRepository.create(itemSale);
+
+      await salesRepository.save(sale);
+      
     }
 
-    // Check if product exists
-    const product = await getRepository(Product).findOne({
-      where: {
-        id: saleData.product_id
-      }
-    });
-
-    if (!product) {
-      throw new AppError(`product does not exist.`, 400);
-    }
-
-    // Sets the cost and sale price in order to calculate profit
-    saleData.sale_price = product.sale_price * saleData.quantity;
-    saleData.cost_price = product.cost_price * saleData.quantity;
-
-    // Check stock
-    // Remove from stock
-
-    const sale = salesRepository.create(saleData);
-
-    await salesRepository.save(sale);
-
-    return sale;
+    return {
+      message: 'Venda inserida com sucesso!'
+    };
 
   }
 
