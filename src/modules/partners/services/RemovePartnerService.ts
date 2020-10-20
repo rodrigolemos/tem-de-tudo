@@ -14,7 +14,7 @@ class RemovePartnerService {
     });
 
     if (!partnerFound) {
-      throw new AppError('partner not found');
+      throw new AppError('Parceiro não encontrado', 404);
     }
 
     partnerFound.status = 'I';

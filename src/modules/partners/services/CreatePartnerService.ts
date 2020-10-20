@@ -6,21 +6,13 @@ import ICreatePartnerServiceDTO from '../dtos/ICreatePartnerServiceDTO';
 
 class CreatePartnerService {
   public async execute(partnerData: ICreatePartnerServiceDTO): Promise<Partner | null> {
-    try {
+    const partnersRepository = getRepository(Partner);
 
-      const partnersRepository = getRepository(Partner);
+    const partner = partnersRepository.create(partnerData);
 
-      const partner = partnersRepository.create(partnerData);
+    await partnersRepository.save(partner);
 
-      await partnersRepository.save(partner);
-
-      return partner;
-
-    } catch {
-
-      throw new AppError('Internal Server Error');
-
-    }
+    return partner;
   }
 }
 
