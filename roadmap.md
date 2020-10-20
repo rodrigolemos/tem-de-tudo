@@ -45,3 +45,11 @@
 - Relatório de lucro por período - 15 minutos
 - Formatação de datas e valores - 30 minutos
 - Revisão de nomes, formatos, helpers e loading - 60 minutos
+
+# Dia 5
+- Criação de componente data not found - 30 minutos
+- Melhorias no filtro de datas - 15 minutos
+- Cálculos de total de vendas e total de lucro - 30 minutos
+- Utilização de gráficos para tela inicial - 30 minutos
+- Criação de formulário para inclusão de produto - 45 minutos
+- Melhorias no design, escolha de fontes, componentização de itens - 60 minutos
