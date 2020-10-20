@@ -8,7 +8,11 @@ class ListPartnersService {
     try {
       const partnersRepository = getRepository(Partner);
 
-      const partners = await partnersRepository.find();
+      const partners = await partnersRepository.find({
+        where: {
+          status: 'A'
+        }
+      });
 
       return partners;
 

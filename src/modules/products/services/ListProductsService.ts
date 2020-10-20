@@ -8,7 +8,11 @@ class ListProductsService {
     try {
       const productsRepository = getRepository(Product);
 
-      const productsFound = await productsRepository.find();
+      const productsFound = await productsRepository.find({
+        where: {
+          status: 'A'
+        }
+      });
 
       return productsFound;
 
