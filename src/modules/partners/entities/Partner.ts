@@ -23,6 +23,9 @@ class Partner {
   @Column('varchar')
   type: string;
 
+  @Column('varchar')
+  status: string;
+
   @CreateDateColumn()
   created_at: Date;
 

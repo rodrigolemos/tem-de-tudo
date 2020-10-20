@@ -38,6 +38,9 @@ class Product {
   @Column('integer')
   store_quantity: number;
 
+  @Column('varchar')
+  status: string;
+
   @CreateDateColumn()
   created_at: Date;
 
