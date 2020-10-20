@@ -7,10 +7,13 @@ import Product from '@modules/products/entities/Product';
 import ICreateSaleServiceDTO from '../dtos/ICreateSaleServiceDTO';
 
 class CreateSaleService {
-  public async execute(saleData: ICreateSaleServiceDTO[]): Promise<Sale[] | {}> {
+  public async execute(saleData: ICreateSaleServiceDTO[]): Promise<Sale[] | null> {
 
     const salesRepository = getRepository(Sale);
     const productsRepository = getRepository(Product);
+
+    const preparedSale = [];
+    const updatedProducts = [];
 
     for (const itemSale of saleData) {
 
@@ -41,22 +44,33 @@ class CreateSaleService {
         throw new AppError(`product does not exist.`, 400);
       }
 
+      // Check and remove from product from stock
+      const finalQuantity = product.stock_quantity - itemSale.quantity;
+
+      if (finalQuantity < 0) {
+
+        throw new AppError(`insufficient stock`, 400);
+
+      } else {
+
+        product.stock_quantity = finalQuantity;
+
+        updatedProducts.push(productsRepository.create(product));
+
+      }
+
       // Sets the cost and sale price in order to calculate profit
       itemSale.sale_price = product.sale_price * itemSale.quantity;
       itemSale.cost_price = product.cost_price * itemSale.quantity;
 
-      // Check stock
-      // Remove from stock
-
-      const sale = salesRepository.create(itemSale);
-
-      await salesRepository.save(sale);
+      preparedSale.push(salesRepository.create(itemSale));
       
     }
 
-    return {
-      message: 'Venda inserida com sucesso!'
-    };
+    await productsRepository.save(updatedProducts);
+    await salesRepository.save(preparedSale);
+
+    return preparedSale;
 
   }
 
