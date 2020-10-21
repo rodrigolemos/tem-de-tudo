@@ -62,8 +62,7 @@ export class CreateProducts1602799380337 implements MigrationInterface {
                     {
                         name: 'status',
                         type: 'varchar',
-                        isNullable: false,
-                        default: 'A',
+                        isNullable: false
                     },
                     {
                         name: 'created_at',

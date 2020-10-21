@@ -37,8 +37,7 @@ export class CreatePartners1602887678520 implements MigrationInterface {
                     {
                         name: 'status',
                         type: 'varchar',
-                        isNullable: false,
-                        default: 'A',
+                        isNullable: false
                     },
                     {
                         name: 'created_at',

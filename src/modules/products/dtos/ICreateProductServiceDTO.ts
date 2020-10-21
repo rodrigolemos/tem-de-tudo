@@ -8,4 +8,5 @@ export default interface ICreateAppointmentDTO {
   sale_price: number;
   stock_quantity: number;
   store_quantity: number;
+  status: string;
 }

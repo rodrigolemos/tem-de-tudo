@@ -3,4 +3,5 @@ export default interface ICreatePartnerServiceDTO {
   address: string;
   phone: string;
   type: "customer" | "seller";
+  status: string;
 }
