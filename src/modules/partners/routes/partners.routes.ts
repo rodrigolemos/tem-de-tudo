@@ -7,6 +7,6 @@ const partnersController = new PartnersController();
 
 partnersRouter.get('/list', partnersController.list);
 partnersRouter.post('/create', partnersController.create);
-partnersRouter.get('/remove/:id', partnersController.remove);
+partnersRouter.put('/remove/:id', partnersController.remove);
 
 export default partnersRouter;
