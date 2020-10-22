@@ -7,7 +7,11 @@ class ListSalesService {
   public async execute(): Promise<Sale[] | null> {
     const salesRepository = getRepository(Sale);
 
-    const salesFound = await salesRepository.find();
+    const salesFound = await salesRepository.find({
+      order: {
+        order: 'DESC'
+      }
+    });
 
     return salesFound;
   }
