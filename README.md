@@ -27,16 +27,16 @@ Todas as informações são dinâmicas, ou seja, para cada valor inserido os cá
 # Entregas
 
 - É necessário você definir, descrever e estimar tempo para tarefas a serem realizadas a partir do escopo do projeto.
-Tarefa realizada no seguinte [link](https://github.com/rodrigolemos/tem-de-tudo-test/blob/main/roadmap.md).
+- Tarefa realizada no seguinte [link](https://github.com/rodrigolemos/tem-de-tudo-test/blob/main/roadmap.md).
 
 - É necessário que o frontend funcione um projeto separado do backend.
-Tarefa realizada no seguinte [link](https://tem-de-tudo-test-rodrigo.netlify.app/).
+- Tarefa realizada no seguinte [link](https://tem-de-tudo-test-rodrigo.netlify.app/).
 
 - É necessário você desenvolver a ferramenta através das tarefas definidas por você (sem restrições de tecnologias, uma sugestão é criar branches e commits relacionados).
-Tarefa realizada.
+- Tarefa realizada.
 
 - É necessário você subir aplicação no IBM Cloud e disponibilizar um link público utilizando CD e CI.
-Tarefa realizada utilizando uma outra plataforma de cloud e [Github Actions](https://github.com/features/actions) como CD/CI.
+- Tarefa realizada utilizando uma outra plataforma de cloud e [Github Actions](https://github.com/features/actions) como CD/CI.
 
 - É necessário utilizar o Github para versionar.
-Tarefa realizada.
+- Tarefa realizada.
