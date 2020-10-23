@@ -3,7 +3,7 @@
 - Construção da estrutura inicial - 45 minutos
 
 # Dia 1
-## backend
+## back-end
 - Criação de rotas de produtos - 15 minutos
 - Configuração do ORM - 30 minutos
 - Criação de tabela, modelo e repositório de produtos - 20 minutos
@@ -13,7 +13,7 @@
 - Tratamento de erros - 15 minutos
 
 ## Dia 2
-## backend
+## back-end
 - Refatoração de repository de produtos e criação de DTOs - 15 minutos
 - Criação de tabela, modelo e serviço de criação de clientes - 45 minutos
 - Serviço de listagem de clientes - 15 minutos
@@ -24,7 +24,7 @@
 - Criação de inclusão de venda - 40 minutos
 
 ## Dia 3
-## backend
+## back-end
 - Inclusão de registros corretos nas tabelas - 15 minutos
 - Finalização da inclusão de venda - 30 minutos
 - Criação de querys para relatórios - 20 minutos
@@ -36,7 +36,7 @@
 - Criação de estrutura inicial do front end - 40 minutos
 
 ## Dia 4
-## frontend
+## front-end
 - Criação de página inicial, componentes primários e style global - 30 minutos
 - Definição de estilos e variáveis para tema - 20 minutos
 - Finalização de painel lateral e estrutura principal - 20 minutos
@@ -51,7 +51,7 @@
 - Revisão de nomes, formatos, helpers e loading - 60 minutos
 
 ## Dia 5
-## frontend
+## front-end
 - Criação de componente data not found - 30 minutos
 - Melhorias no filtro de datas - 15 minutos
 - Cálculos de total de vendas e total de lucro - 30 minutos
@@ -60,10 +60,11 @@
 - Melhorias no design, escolha de fontes, componentização de itens - 60 minutos
 
 ## Dia 6
-## backend
+## back-end / front-end
 - Inclusão de coluna status para remoção de produtos e parceiros - 45 minutos
 - Finalização do serviço de inclusão de venda (validação de estoque e múltiplos itens) - 30 minutos
 - Ajustes no tratamento de erros e tradução das mensagens de resposta - 30 minutos
+- Melhorias gerais e correções no front-end - 60 minutos
 
 ## Dia 7
 ## devops
