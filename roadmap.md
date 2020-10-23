@@ -3,6 +3,7 @@
 - Construção da estrutura inicial - 45 minutos
 
 # Dia 1
+## backend
 - Criação de rotas de produtos - 15 minutos
 - Configuração do ORM - 30 minutos
 - Criação de tabela, modelo e repositório de produtos - 20 minutos
@@ -11,7 +12,8 @@
 - Refatoração da estrutura de pastas - 15 minutos
 - Tratamento de erros - 15 minutos
 
-# Dia 2
+## Dia 2
+## backend
 - Refatoração de repository de produtos e criação de DTOs - 15 minutos
 - Criação de tabela, modelo e serviço de criação de clientes - 45 minutos
 - Serviço de listagem de clientes - 15 minutos
@@ -21,7 +23,8 @@
 - Criação de serviço de listagem de vendas - 30 minutos
 - Criação de inclusão de venda - 40 minutos
 
-# Dia 3
+## Dia 3
+## backend
 - Inclusão de registros corretos nas tabelas - 15 minutos
 - Finalização da inclusão de venda - 30 minutos
 - Criação de querys para relatórios - 20 minutos
@@ -32,7 +35,8 @@
 - Configurando build de produção - 120 minutos
 - Criação de estrutura inicial do front end - 40 minutos
 
-# Dia 4
+## Dia 4
+## frontend
 - Criação de página inicial, componentes primários e style global - 30 minutos
 - Definição de estilos e variáveis para tema - 20 minutos
 - Finalização de painel lateral e estrutura principal - 20 minutos
@@ -46,7 +50,8 @@
 - Formatação de datas e valores - 30 minutos
 - Revisão de nomes, formatos, helpers e loading - 60 minutos
 
-# Dia 5
+## Dia 5
+## frontend
 - Criação de componente data not found - 30 minutos
 - Melhorias no filtro de datas - 15 minutos
 - Cálculos de total de vendas e total de lucro - 30 minutos
@@ -54,7 +59,21 @@
 - Criação de formulário para inclusão de produto - 45 minutos
 - Melhorias no design, escolha de fontes, componentização de itens - 60 minutos
 
-# Dia 6
+## Dia 6
+## backend
 - Inclusão de coluna status para remoção de produtos e parceiros - 45 minutos
 - Finalização do serviço de inclusão de venda (validação de estoque e múltiplos itens) - 30 minutos
 - Ajustes no tratamento de erros e tradução das mensagens de resposta - 30 minutos
+
+## Dia 7
+## devops
+- Geração da build do projeto - 60 minutos
+- Configuração de um droplet na Digital Ocean - 30 minutos
+- Criação de servidor Linux - 15 minutos
+- Configuração de servidor - 30 minutos
+- Criação das instâncias do Docker - 30 minutos
+- Configurações de proxy e NGINX - 40 minutos
+- Configurações de PM2 para manter aplicação rodando - 15 minutos
+- Criação de workflow de CI - 45 minutos
+- Criação de deploy contínuo - 30 minutos
+- Testes e homologação - 60 minutos
