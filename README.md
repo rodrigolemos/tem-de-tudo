@@ -27,17 +27,11 @@ Todas as informações são dinâmicas, ou seja, para cada valor inserido os cá
 # Entregas
 
 1) É necessário você definir, descrever e estimar tempo para tarefas a serem realizadas a partir do escopo do projeto.
-- Tarefa realizada no seguinte [link](https://github.com/rodrigolemos/tem-de-tudo-test/blob/main/roadmap.md)
 
 2) É necessário que o frontend funcione um projeto separado do backend.
-- Tarefa realizada no seguinte [link](https://tem-de-tudo-test-rodrigo.netlify.app/).
-- Obs.: por questões de segurança, o netlify não permite acesso à APIs http, somente https. Por esse motivo, é recomendado que você rode o front-end em sua máquina local através [desse repositório](https://github.com/rodrigolemos/tem-de-tudo-test-front).
 
 3) É necessário você desenvolver a ferramenta através das tarefas definidas por você (sem restrições de tecnologias, uma sugestão é criar branches e commits relacionados).
-- Tarefa realizada.
 
 4) É necessário você subir aplicação no IBM Cloud e disponibilizar um link público utilizando CD e CI.
-- Tarefa realizada utilizando uma outra plataforma de cloud ([Digital Ocean](https://www.digitalocean.com/)) e [Github Actions](https://github.com/features/actions) como CD/CI.
 
 5) É necessário utilizar o Github para versionar.
-- Tarefa realizada.
