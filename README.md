@@ -17,8 +17,8 @@ Todas as informações são dinâmicas, ou seja, para cada valor inserido os cá
 
 # Instalação e execução
 
-- Clone o repositório ```https://github.com/rodrigolemos/tem-de-tudo-test.git```
-- Vá até o diretório ```cd tem-de-tudo-test```
+- Clone o repositório ```https://github.com/rodrigolemos/tem-de-tudo.git```
+- Vá até o diretório ```cd tem-de-tudo```
 - Execute ```npm install``` para instalar as dependências
 - Abra o arquivo ormconfig.json e preencha com suas credenciais das instâncias dos bancos de dados
 - Execute ```npm run typeorm migration:run``` para rodar as migrations 
