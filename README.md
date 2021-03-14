@@ -24,14 +24,6 @@ Todas as informações são dinâmicas, ou seja, para cada valor inserido os cá
 - Execute ```npm run typeorm migration:run``` para rodar as migrations 
 - Execute ```npm run start:dev``` para rodar o servidor
 
-# Entregas
+# Autor
 
-1) É necessário você definir, descrever e estimar tempo para tarefas a serem realizadas a partir do escopo do projeto.
-
-2) É necessário que o frontend funcione um projeto separado do backend.
-
-3) É necessário você desenvolver a ferramenta através das tarefas definidas por você (sem restrições de tecnologias, uma sugestão é criar branches e commits relacionados).
-
-4) É necessário você subir aplicação no IBM Cloud e disponibilizar um link público utilizando CD e CI.
-
-5) É necessário utilizar o Github para versionar.
+Rodrigo Lemos
