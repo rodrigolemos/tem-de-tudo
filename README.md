@@ -24,6 +24,6 @@ Todas as informações são dinâmicas, ou seja, para cada valor inserido os cá
 - Execute ```npm run typeorm migration:run``` para rodar as migrations 
 - Execute ```npm run start:dev``` para rodar o servidor
 
-# Autor
+## Autor
 
 Rodrigo Lemos
